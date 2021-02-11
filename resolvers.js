@@ -12,7 +12,9 @@ const Query = {
    studentById:(root,args,context,info) => {
       //args will contain parameter passed in query
       return db.students.get(args.id);
-   }
+   },
+
+   sayHello:(root,args,context,info) => `Hi ${args.name} GraphQL server says Hello to you!!`
 }
 
 //for each single student object returned,resolver is invoked
